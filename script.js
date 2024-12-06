@@ -13,10 +13,23 @@ searchBtn.addEventListener("click", () =>{
     fetchMovie(movieTitle)
 })
 
-function displayMovie(data){
+function fetchMovie(title)
+{
 
 }
 
-function showError(message){
+function displayMovie(data)
+{
+
+    errorMessage.classList.add("hidden");
+    movieDetails.classList.remove("hidden");
+
+}
+
+function showError(message)
+{
     
+    movieDetails.classList.add("hidden");
+    errorMessage.textContent = message;
+    errorMessage.classList.remove("hidden");
 }
